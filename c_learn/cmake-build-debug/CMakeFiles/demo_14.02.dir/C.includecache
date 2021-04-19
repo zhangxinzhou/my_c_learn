@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Administrator/CLionProjects/c_learn/charpter14/Age.h
+
+C:/Users/Administrator/CLionProjects/c_learn/charpter14/demo_14.02.c
+stdio.h
+-
+Age.h
+C:/Users/Administrator/CLionProjects/c_learn/charpter14/Age.h
+

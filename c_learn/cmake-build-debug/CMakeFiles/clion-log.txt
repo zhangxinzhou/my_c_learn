@@ -1,0 +1,6 @@
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Administrator\CLionProjects\c_learn
+-- Configuring done
+CMake Error: Cannot determine link language for target "Age".
+CMake Error: CMake can not determine linker language for target: Age
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.

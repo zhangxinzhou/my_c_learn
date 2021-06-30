@@ -7,6 +7,8 @@ int main()
     cout << "main() will call the simple() function:\n";
     simple();
     cout << "main() is finished with the simple() function.\n";
+
+    system("pause");
     return 0;
 }
 

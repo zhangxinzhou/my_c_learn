@@ -1,8 +1,17 @@
 #include <stdio.h>
 
-int main() {
-    printf("Hello, World!\n");
-    char c[] = "Hello World";
-    printf("%s", c);
+void mulstore(long, long, long *);
+
+int mian()
+{
+    long d;
+    mulstore(2, 3, &d);
+    printf("2 * 3 --> %ld\n", d);
     return 0;
+}
+
+long mult2(long a, long b)
+{
+    long s = a * b;
+    return s;
 }

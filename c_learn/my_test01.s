@@ -119,10 +119,31 @@ caller:
 	addq	$56, %rsp
 	ret
 	.seh_endproc
+	.globl	echo
+	.def	echo;	.scl	2;	.type	32;	.endef
+	.seh_proc	echo
+echo:
+	pushq	%rbx
+	.seh_pushreg	%rbx
+	subq	$48, %rsp
+	.seh_stackalloc	48
+	.seh_endprologue
+	leaq	40(%rsp), %rbx
+	movq	%rbx, %rcx
+	call	gets
+	movq	%rbx, %rcx
+	call	puts
+	nop
+	addq	$48, %rsp
+	popq	%rbx
+	ret
+	.seh_endproc
 	.def	__main;	.scl	2;	.type	32;	.endef
 	.section .rdata,"dr"
 .LC0:
 	.ascii "a = %ld, b = %ld\12\0"
+.LC1:
+	.ascii "local at %p\12\0"
 	.text
 	.globl	main
 	.def	main;	.scl	2;	.type	32;	.endef
@@ -140,9 +161,14 @@ main:
 	movl	44(%rsp), %edx
 	leaq	.LC0(%rip), %rcx
 	call	printf
+	leaq	40(%rsp), %rdx
+	leaq	.LC1(%rip), %rcx
+	call	printf
 	movl	$0, %eax
 	addq	$56, %rsp
 	ret
 	.seh_endproc
 	.ident	"GCC: (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0"
+	.def	gets;	.scl	2;	.type	32;	.endef
+	.def	puts;	.scl	2;	.type	32;	.endef
 	.def	printf;	.scl	2;	.type	32;	.endef

@@ -83,10 +83,20 @@ long caller()
     return sum * diff;
 }
 
+void echo()
+{
+    char buf[8];
+    gets(buf);
+    puts(buf);
+}
+
 int main(int argc, char const *argv[])
 {
     long a = 4;
     long b = exchange(&a, 3);
     printf("a = %ld, b = %ld\n", a, b);
+
+    long local;
+    printf("local at %p\n", &local);
     return 0;
 }

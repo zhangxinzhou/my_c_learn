@@ -4,6 +4,7 @@ int value;
 void func(int sum)
 {
     printf("sum is :%d\n", sum);
+    system("pause");
 }
 
 int main()

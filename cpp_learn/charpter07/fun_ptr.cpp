@@ -18,6 +18,21 @@ int main()
     cout << "Here's Pam's estimate:\n";
     estimate(code, pam);
 
+    cout << "betsy = " << betsy << endl;
+    cout << "&betsy = " << &betsy << endl;
+    cout << "*betsy = " << *betsy << endl;
+    cout << "pan = " << pam << endl;
+    cout << "&pan = " << &pam << endl;
+    cout << "*pan = " << *pam << endl;
+    auto tmp_a = betsy;
+    cout << "tmp_a = " << tmp_a << endl;
+    cout << "&tmp_a = " << &tmp_a << endl;
+    cout << "*tmp_a = " << *tmp_a << endl;
+    auto tmp_b = pam;
+    cout << "tmp_b = " << tmp_b << endl;
+    cout << "&tmp_b = " << &tmp_b << endl;
+    cout << "*tmp_b = " << *tmp_b << endl;
+
     system("pause");
     return 0;
 }

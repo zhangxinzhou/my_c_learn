@@ -25,7 +25,7 @@ int main()
     // no initialization
     free_throws dup;
 
-     display(one);
+    display(one);
     accumulate(team, one);
     display(team);
 
